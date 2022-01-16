@@ -1,0 +1,67 @@
+.stepperContainer {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.stepContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circleStyles {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.circle {
+    @extend .circleStyles;
+    color: rgb(26, 25, 25);
+    background: #ffff;
+    border: 1px solid #e7e7e7;
+}
+
+.activeCircle {
+    @extend .circleStyles;
+    color: rgb(26, 25, 25);
+    color: #ffff;
+    background: #664de5;
+    border: 1px solid #664de5;
+}
+
+.line {
+    width: 30px;
+    height: 1px;
+    background: #e7e7e7;
+}
+
+.activeLine {
+    @extend .line;
+    background: #664de5;
+}
+
+.noLine {
+    flex: 1;
+}
+
+
+@media only screen and (max-width:480px) {
+    .circleStyles {
+        width: 20px;
+        height: 20px;
+    }
+
+    .line {
+        width: 20px;
+    }
+}
