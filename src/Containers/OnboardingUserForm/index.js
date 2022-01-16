@@ -20,15 +20,11 @@ const OnboardingUserForm = ({onSubmit, data}) => {
         }))
     }
 
-    useEffect(() => {
-        console.log("mounted", data);
-    }, [])
     const handleSubmit = () => {
         // clear errors.
         setErrorMessage({});
 
         if(!name.fullName) {
-            console.log("empty full name", !name.fullName ,name);
             setErrorMessage({fullName: "Full name cannot be empty.", displayName: ""})
             return;
         }

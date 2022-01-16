@@ -9,7 +9,7 @@ const App = () => (
     <Switch>
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/onboarding" component={Onboarding} />
-        <Redirect to="/dashboard" />
+        <Redirect to="/onboarding" />
     </Switch>
   </>
 );

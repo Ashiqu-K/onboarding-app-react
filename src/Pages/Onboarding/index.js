@@ -42,7 +42,11 @@ const Onboarding = () => {
     }
 
     const handleConfirm = () => {
-        // Do necessary calls here, to sumbit onboarding data to server.
+        /*
+            ...
+            Do necessary calls here, to sumbit onboarding data to server.
+            ...
+        */
 
         // Redirect to home/dashboard.
         history.push("/dashboard");
@@ -79,6 +83,7 @@ const Onboarding = () => {
                     <Icon name={IconType.logo} iconStyles={styles.logo}  alt="logo" />
                     <span className={styles.title} >Eden</span>
                 </div>
+
                 <Stepper activeStep={currentStep} stepComponents={getStepComponents()} goToStep={goToStep}/>
             </div>
         </div>

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 
 import styles from "./index.scss"
-import { Icon } from "../../Components";
+import { Button, Icon } from "../../Components";
 import { IconType } from "../../Components/Icon";
 import { OnboardingType } from "../../Pages/Onboarding";
+import { ButtonType } from "../../Components/Button";
 
 const OnboardingOptions = ({onSubmit, selectedType}) => {
     const [selectedOption, setSelectedOption] = useState(selectedType);
@@ -28,7 +29,7 @@ const OnboardingOptions = ({onSubmit, selectedType}) => {
                     </div>
                 </div>
 
-                <button className={styles.button} onClick={() => {onSubmit(selectedType)}}>{"Create Workspace"}</button>
+                <Button label={"Create Workspace"} type={ButtonType.primary} buttonClass={styles.button} onClick={() => {onSubmit(selectedType)}} />
             </div>
         </>
     )
