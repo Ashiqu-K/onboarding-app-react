@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-import styles from "./index.scss";
+import styles from './index.scss'
 
 const Dashboard = () => {
     return (
@@ -10,4 +10,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard;
+export default Dashboard
