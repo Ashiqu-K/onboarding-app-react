@@ -29,7 +29,7 @@ const OnboardingOptions = ({onSubmit, selectedType}) => {
                     </div>
                 </div>
 
-                <Button label={"Create Workspace"} type={ButtonType.primary} buttonClass={styles.button} onClick={() => {onSubmit(selectedType)}} />
+                <Button label={"Create Workspace"} type={ButtonType.primary} buttonClass={styles.button} onClick={() => {onSubmit({type: selectedOption})}} />
             </div>
         </>
     )
