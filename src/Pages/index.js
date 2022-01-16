@@ -1,7 +1,4 @@
-import Onboarding from "./Onboarding";
-import Dashboard from "./Dashboard";
+import Onboarding from './Onboarding';
+import Dashboard from './Dashboard';
 
-export {
-    Dashboard,
-    Onboarding
-}
+export { Dashboard, Onboarding };
