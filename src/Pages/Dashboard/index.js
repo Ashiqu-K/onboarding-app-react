@@ -1,8 +1,12 @@
 import React from "react";
 
+import styles from "./index.scss";
+
 const Dashboard = () => {
     return (
-        <h1>This the dashboard ...!!</h1>
+        <div className={styles.pageWrapper}>
+            <h1>This is your dashboard ...!!</h1>
+        </div>
     )
 }
 
