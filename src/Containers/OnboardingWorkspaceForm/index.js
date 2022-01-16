@@ -1,31 +1,34 @@
-import React, { useState } from 'react'
-import { Button, TextField } from '../../Components'
-import { ButtonType } from '../../Components/Button'
+import React, { useState } from 'react';
+import { Button, TextField } from '../../Components';
+import { ButtonType } from '../../Components/Button';
 
-import styles from './index.scss'
+import styles from './index.scss';
 
 const WorkspaceForm = ({ onSubmit, data }) => {
-    const [workspace, setName] = useState({ ...data })
-    const [errorMessage, setErrorMessage] = useState('')
+    const [workspace, setName] = useState({ ...data });
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleChange = (e) => {
         setName((prevState) => ({
             ...prevState,
             [e.target.name]: e.target.value,
-        }))
-    }
+        }));
+    };
 
     const handleSubmit = () => {
         // clear errors.
-        setErrorMessage('')
+        setErrorMessage('');
 
         if (!workspace.name) {
-            setErrorMessage('Workspace name cannot be empty.')
-            return
+            setErrorMessage('Workspace name cannot be empty.');
+            return;
         }
 
-        onSubmit({ workspaceName: workspace.name, workspaceUrl: workspace.url })
-    }
+        onSubmit({
+            workspaceName: workspace.name,
+            workspaceUrl: workspace.url,
+        });
+    };
 
     return (
         <>
@@ -72,7 +75,7 @@ const WorkspaceForm = ({ onSubmit, data }) => {
                 />
             </div>
         </>
-    )
-}
+    );
+};
 
-export default WorkspaceForm
+export default WorkspaceForm;

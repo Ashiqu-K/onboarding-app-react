@@ -1,8 +1,8 @@
-import React from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import React from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
-import './index.scss'
-import { Dashboard, Onboarding } from './Pages'
+import './index.scss';
+import { Dashboard, Onboarding } from './Pages';
 
 const App = () => (
     <>
@@ -12,6 +12,6 @@ const App = () => (
             <Redirect to="/onboarding" />
         </Switch>
     </>
-)
+);
 
-export default App
+export default App;

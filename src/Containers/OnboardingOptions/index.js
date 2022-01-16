@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-import styles from './index.scss'
-import { Button, Icon } from '../../Components'
-import { IconType } from '../../Components/Icon'
-import { OnboardingType } from '../../Pages/Onboarding'
-import { ButtonType } from '../../Components/Button'
+import styles from './index.scss';
+import { Button, Icon } from '../../Components';
+import { IconType } from '../../Components/Icon';
+import { OnboardingType } from '../../Pages/Onboarding';
+import { ButtonType } from '../../Components/Button';
 
 const OnboardingOptions = ({ onSubmit, selectedType }) => {
-    const [selectedOption, setSelectedOption] = useState(selectedType)
+    const [selectedOption, setSelectedOption] = useState(selectedType);
 
     return (
         <>
@@ -27,7 +27,7 @@ const OnboardingOptions = ({ onSubmit, selectedType }) => {
                                 : styles.option
                         }
                         onClick={() => {
-                            setSelectedOption(OnboardingType.self)
+                            setSelectedOption(OnboardingType.self);
                         }}
                     >
                         <Icon
@@ -53,7 +53,7 @@ const OnboardingOptions = ({ onSubmit, selectedType }) => {
                                 : styles.option
                         }
                         onClick={() => {
-                            setSelectedOption(OnboardingType.team)
+                            setSelectedOption(OnboardingType.team);
                         }}
                     >
                         <Icon
@@ -78,12 +78,12 @@ const OnboardingOptions = ({ onSubmit, selectedType }) => {
                     type={ButtonType.primary}
                     buttonClass={styles.button}
                     onClick={() => {
-                        onSubmit({ type: selectedOption })
+                        onSubmit({ type: selectedOption });
                     }}
                 />
             </div>
         </>
-    )
-}
+    );
+};
 
-export default OnboardingOptions
+export default OnboardingOptions;

@@ -1,47 +1,47 @@
-import React, { useEffect, useState } from 'react'
-import { Button, TextField } from '../../Components'
-import { ButtonType } from '../../Components/Button'
+import React, { useEffect, useState } from 'react';
+import { Button, TextField } from '../../Components';
+import { ButtonType } from '../../Components/Button';
 
-import styles from './index.scss'
+import styles from './index.scss';
 
 const initialState = {
     fullName: '',
     displayName: '',
-}
+};
 
 const OnboardingUserForm = ({ onSubmit, data }) => {
-    const [name, setName] = useState({ ...data })
-    const [errorMessage, setErrorMessage] = useState({})
+    const [name, setName] = useState({ ...data });
+    const [errorMessage, setErrorMessage] = useState({});
 
     const handleChange = (e) => {
         setName((prevState) => ({
             ...prevState,
             [e.target.name]: e.target.value,
-        }))
-    }
+        }));
+    };
 
     const handleSubmit = () => {
         // clear errors.
-        setErrorMessage({})
+        setErrorMessage({});
 
         if (!name.fullName) {
             setErrorMessage({
                 fullName: 'Full name cannot be empty.',
                 displayName: '',
-            })
-            return
+            });
+            return;
         }
 
         if (!name.displayName) {
             setErrorMessage({
                 displayName: 'Display name cannot be empty.',
                 fullName: '',
-            })
-            return
+            });
+            return;
         }
 
-        onSubmit({ ...name })
-    }
+        onSubmit({ ...name });
+    };
 
     return (
         <>
@@ -75,7 +75,7 @@ const OnboardingUserForm = ({ onSubmit, data }) => {
                 />
             </div>
         </>
-    )
-}
+    );
+};
 
-export default OnboardingUserForm
+export default OnboardingUserForm;

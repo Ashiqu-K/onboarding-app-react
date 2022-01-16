@@ -1,14 +1,14 @@
-import React from 'react'
-import styles from './index.scss'
-import Step from './Step.js'
+import React from 'react';
+import styles from './index.scss';
+import Step from './Step.js';
 
 const Stepper = ({ activeStep, stepComponents, goToStep }) => {
     const renderCurrentStep = () => {
         if (!stepComponents?.length || !stepComponents[activeStep - 1])
-            return null
+            return null;
 
-        return stepComponents[activeStep - 1].component
-    }
+        return stepComponents[activeStep - 1].component;
+    };
 
     return (
         <>
@@ -27,7 +27,7 @@ const Stepper = ({ activeStep, stepComponents, goToStep }) => {
 
             {renderCurrentStep()}
         </>
-    )
-}
+    );
+};
 
-export default Stepper
+export default Stepper;

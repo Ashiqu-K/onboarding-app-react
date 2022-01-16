@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-import { Button } from '../../Components'
-import { ButtonType } from '../../Components/Button'
-import styles from './index.scss'
+import { Button } from '../../Components';
+import { ButtonType } from '../../Components/Button';
+import styles from './index.scss';
 
 const OnboardingComplete = ({ onSubmit }) => {
     return (
@@ -22,7 +22,7 @@ const OnboardingComplete = ({ onSubmit }) => {
                 />
             </div>
         </>
-    )
-}
+    );
+};
 
-export default OnboardingComplete
+export default OnboardingComplete;

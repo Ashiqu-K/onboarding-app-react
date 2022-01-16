@@ -1,7 +1,7 @@
-import React from 'react'
-import classNames from 'classnames'
+import React from 'react';
+import classNames from 'classnames';
 
-import styles from './index.scss'
+import styles from './index.scss';
 
 const TextField = ({ label, name, value, error, onChange, wrapperStyles }) => {
     return (
@@ -17,7 +17,7 @@ const TextField = ({ label, name, value, error, onChange, wrapperStyles }) => {
                 value={value}
             />
         </div>
-    )
-}
+    );
+};
 
-export default TextField
+export default TextField;

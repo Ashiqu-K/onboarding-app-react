@@ -1,13 +1,13 @@
-import React from 'react'
-import classNames from 'classnames'
+import React from 'react';
+import classNames from 'classnames';
 
-import styles from './index.scss'
-import user from '../../Assets/Images/user.png'
-import userActive from '../../Assets/Images/user-active.png'
-import userGroup from '../../Assets/Images/user-group.png'
-import userGroupActive from '../../Assets/Images/user-group-active.png'
-import logo from '../../Assets/Images/brand-logo.png'
-import error from '../../Assets/Images/error.png'
+import styles from './index.scss';
+import user from '../../Assets/Images/user.png';
+import userActive from '../../Assets/Images/user-active.png';
+import userGroup from '../../Assets/Images/user-group.png';
+import userGroupActive from '../../Assets/Images/user-group-active.png';
+import logo from '../../Assets/Images/brand-logo.png';
+import error from '../../Assets/Images/error.png';
 
 export const IconType = {
     user: 'user',
@@ -15,25 +15,25 @@ export const IconType = {
     userGroup: 'user-group',
     userGroupActive: 'user-group-active',
     logo: 'logo',
-}
+};
 
 const Icon = ({ name, iconStyles, alt }) => {
     const getIcon = () => {
         switch (name) {
             case IconType.user:
-                return user
+                return user;
             case IconType.userActive:
-                return userActive
+                return userActive;
             case IconType.userGroup:
-                return userGroup
+                return userGroup;
             case IconType.userGroupActive:
-                return userGroupActive
+                return userGroupActive;
             case IconType.logo:
-                return logo
+                return logo;
             default:
-                return error
+                return error;
         }
-    }
+    };
 
     return (
         <img
@@ -41,7 +41,7 @@ const Icon = ({ name, iconStyles, alt }) => {
             src={getIcon()}
             alt={alt || 'icon'}
         />
-    )
-}
+    );
+};
 
-export default Icon
+export default Icon;
